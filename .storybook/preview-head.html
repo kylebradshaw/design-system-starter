@@ -1,0 +1,16 @@
+<script>
+  let activeTheme = 0;
+  let themes = ['light', 'dark', 'none']
+  let switchTheme = () => {
+    document.body.classList = '';
+    if (activeTheme == themes.length) {
+      activeTheme = 0;
+      document.body.className = themes[activeTheme];
+    } else {
+      document.body.className = themes[activeTheme];
+    }
+    activeTheme++
+    console.log(`${document.body.className}--${activeTheme}`)
+  }
+  window.setInterval(() => switchTheme(), 1000)
+</script>
